@@ -4,7 +4,7 @@ import 'package:to_do_list/models/task_data.dart';
 import 'package:to_do_list/widgets/tasks_tile.dart';
 
 class TasksList extends StatelessWidget {
-  final bool showCompletedTasks; // Added to determine whether to show completed tasks or not
+  final bool showCompletedTasks; 
 
   TasksList({this.showCompletedTasks = true});
 

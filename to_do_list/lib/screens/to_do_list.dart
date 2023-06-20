@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:to_do_list/widgets/tasks_list.dart';
 import '../models/task_data.dart';
 import 'add_screen.dart';
-import 'login_screen.dart';
 
 class ToDoList extends StatelessWidget {
   const ToDoList({Key? key});
@@ -33,24 +32,19 @@ class ToDoList extends StatelessWidget {
           backgroundColor: Colors.grey,
           child: const Icon(Icons.add),
         ),
-        backgroundColor: Color.fromARGB(255, 155, 72, 170),
+        backgroundColor: const Color.fromARGB(255, 155, 72, 170),
         body: Container(
           padding:
               const EdgeInsets.only(right: 20, left: 20, top: 60, bottom: 80),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
+              const Row(
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.playlist_add_check,
+                  Icon(Icons.playlist_add_check,
                         size: 40, color: Colors.white),
-                    onPressed: () {
-                      Get.to(LoginScreen());
-                    },
-                  ),
-                  const SizedBox(width: 90),
-                  const Text("To Do List",
+                  SizedBox(width: 90),
+                  Text("To Do List",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,

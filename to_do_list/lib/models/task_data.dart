@@ -16,6 +16,7 @@ class TaskData extends GetxController {
 
   void deleteTask(Task task) {
     tasks.remove(task);
+      update();
   }
 } class Task {
   final String name;

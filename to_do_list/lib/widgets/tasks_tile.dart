@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TasksTile extends StatelessWidget {
   final bool isChecked;
   final String taskTitle;
@@ -24,12 +23,20 @@ class TasksTile extends StatelessWidget {
           decoration: isChecked ? TextDecoration.lineThrough : null,
         ),
       ),
-      trailing: Checkbox(
-        activeColor: const Color.fromARGB(255, 155, 72, 170),
-        value: isChecked,
-        onChanged: checkboxChange,
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          IconButton(
+            onPressed: listTileDelete,
+            icon: const Icon(Icons.delete),
+          ),
+          Checkbox(
+            activeColor: const Color.fromARGB(255, 155, 72, 170),
+            value: isChecked,
+            onChanged: checkboxChange,
+          ),
+        ],
       ),
-      onLongPress: listTileDelete,
     );
   }
 }
